@@ -25,9 +25,9 @@ const galleryRef = document.querySelector('.gallery');
 console.log(galleryRef);
 
 const markupGallery = images.map(image => {
-  return `<li><img src="${image.url}" alt="${image.alt}" class="gallery-item"></li>`;
+  return `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" ></li>`;
   
 }).join("");
 console.log(markupGallery);
 
-galleryRef.innerHTML = markupGallery
+galleryRef.insertAdjacentHTML("afterbegin", markupGallery);
