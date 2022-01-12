@@ -13,9 +13,14 @@ const inputRef = document.querySelector('#validation-input');
 inputRef.addEventListener('blur', onInputBlur);
 
 function onInputBlur(event) {
-    if(inputRef.value.length >= 6) {
-inputRef.classList.add('valid')
+    console.log(inputRef.value.length);
+    if (inputRef.value.length < 6) {
+        
+        inputRef.classList.add('invalid');
     } else {
-        inputRef.classList.add('invalid')
+        inputRef.classList.add('valid');
     }
+       
+    
+    
 }
