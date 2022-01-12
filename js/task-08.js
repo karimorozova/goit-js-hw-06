@@ -10,3 +10,39 @@
 Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
 
 */
+
+
+   const formRef = document.querySelector('.login-form');
+//    console.log(formRef);
+//    console.log(formRef.elements);
+
+   formRef.addEventListener('submit', onSubmitForm);
+
+   const formElements = formRef.elements;
+
+   function onSubmitForm(event) {
+       event.preventDefault();
+
+       const { elements: { email, password } } = event.currentTarget;
+
+       if(email.value === '' || password.value === '') {
+        alert('All fields must be completed');
+       }
+
+       const elements = {
+
+           email: email.value,
+           password: password.value
+
+       }
+       console.log(elements);
+       event.currentTarget.reset();
+
+       
+    
+            
+        
+   }
+   
+    
+
