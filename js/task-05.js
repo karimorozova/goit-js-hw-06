@@ -15,10 +15,12 @@ const refs = {
 refs.nameInput.addEventListener('input', onInput);
 
 function onInput(event) {
-    if(refs.nameInput.value) {
-        refs.nameOutput.textContent = refs.nameInput.value;
-    } else {
-    refs.nameOutput.textContent = "Anonymous";
-    }
+
+     refs.nameOutput.textContent = refs.nameInput.value ? refs.nameInput.value : "Anonymous";
+    // if(refs.nameInput.value) {
+    //     refs.nameOutput.textContent = refs.nameInput.value;
+    // } else {
+    // refs.nameOutput.textContent = "Anonymous";
+    // }
     
 }
